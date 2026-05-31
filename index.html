@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Padmapriya R - Student Developer Portfolio | Python, Flask, Web Development" />
+  <meta name="author" content="Padmapriya R" />
+  <title>Padmapriya R | Developer Portfolio</title>
+
+  <!-- Google Fonts: Outfit (headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAVIGATION BAR
+  ══════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Padmapriya<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"           class="nav-link">Home</a></li>
+        <li><a href="#about"          class="nav-link">About</a></li>
+        <li><a href="#skills"         class="nav-link">Skills</a></li>
+        <li><a href="#projects"       class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact"        class="nav-link">Contact</a></li>
+        <li>
+          <a href="/resume" class="nav-cta" download>
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 1: HOME / HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <!-- Decorative animated background blobs -->
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+
+    <!-- Grid dots overlay -->
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <!-- Greeting chip -->
+      <div class="hero-chip" data-aos>
+        <span class="chip-dot"></span> Open to Internship Opportunities
+      </div>
+
+      <!-- Name & Title -->
+      <h1 class="hero-name" data-aos>
+        Hi, I'm <span class="gradient-text">Padmapriya R</span>
+      </h1>
+
+      <!-- Animated typewriter role -->
+      <p class="hero-role" data-aos>
+        I'm a <span class="typewriter" id="typewriter"></span>
+      </p>
+
+      <!-- Short intro -->
+      <p class="hero-intro" data-aos>
+        Motivated CSE student with fundamentals in Java, Python, and Core CS subjects.
+        Actively building skills in cloud, AI, and web technologies — seeking an internship
+        to contribute to real-world engineering problems.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-actions" data-aos>
+        <a href="#projects" class="btn btn-primary">
+          View My Work <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="hero-social" data-aos>
+        <a href="https://github.com/ppadmapriya807-cell" target="_blank" rel="noopener noreferrer"
+           class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/padmapriya-raja-701633335aja-701633335" target="_blank" rel="noopener noreferrer"
+           class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:ppadmapriya807@gmail.com" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Floating code card -->
+    <div class="hero-card" data-aos>
+      <div class="code-card">
+        <div class="code-card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-card-title">profile.py</span>
+        </div>
+        <div class="code-card-body">
+          <pre><code><span class="kw">class</span> <span class="cl">Developer</span>:
+    name  = <span class="str">"Padmapriya R"</span>
+    role  = <span class="str">"Full-Stack Dev"</span>
+    stack = [
+        <span class="str">"Python"</span>, <span class="str">"Flask"</span>,
+        <span class="str">"MySQL"</span>, <span class="str">"HTML/CSS"</span>,
+        <span class="str">"JavaScript"</span>
+    ]
+    status = <span class="str">"Available 🟢"</span>
+
+    <span class="kw">def</span> <span class="fn">greet</span>(self):
+        <span class="kw">return</span> <span class="str">"Let's build something!"</span></code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 2: ABOUT ME
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Student | Developer | Problem Solver</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Avatar + stats -->
+        <div class="about-visual" data-aos>
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-placeholder">
+              <i class="fas fa-user"></i>
+            </div>
+            <!-- Floating badge -->
+            <div class="avatar-badge">
+              <i class="fas fa-graduation-cap"></i>
+              <span>B.E. CSE</span>
+            </div>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="stat-cards">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-code"></i></div>
+              <div class="stat-num">7+</div>
+              <div class="stat-label">Skills Learned</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Bio content -->
+        <div class="about-content" data-aos>
+          <h3 class="about-hello">Hello, World! 👋</h3>
+          <p class="about-bio">
+            I'm <strong>Padmapriya R</strong>, a Computer Science and Engineering student at
+            Adhiyamaan College of Engineering, Hosur. I have strong fundamentals in Java, Python,
+            and core CS subjects like DBMS, Operating Systems, and Computer Networks.
+          </p>
+          <p class="about-bio">
+            I've built projects like an <strong>AI-Based Farmer Query Support System</strong> (SIH)
+            and a <strong>PetCare Pet Management System</strong> using Flask & MySQL. I'm passionate
+            about cloud, AI technologies, and solving real-world engineering problems through code.
+          </p>
+
+          <!-- Career Objective -->
+          <div class="objective-box">
+            <div class="objective-icon"><i class="fas fa-bullseye"></i></div>
+            <div>
+              <h4>Career Objective</h4>
+              <p>
+                Motivated Computer Science Engineering student with fundamentals in Java and Core CS subjects.
+                Actively building skills in cloud and AI technologies, seeking an internship or entry-level
+                role to contribute to real-world engineering problems while continuously learning and growing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="education-timeline">
+            <h4 class="edu-heading"><i class="fas fa-graduation-cap"></i> Education</h4>
+
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <span class="edu-year">2024 – 2028</span>
+                <h5>B.E. Computer Science & Engineering</h5>
+                <p>Adhiyamaan College of Engineering, Hosur</p>
+                <span class="edu-grade">CGPA: 8.86 / 10</span>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <span class="edu-year">2020 – 2021</span>
+                <h5>Higher Secondary Certificate (HSC)</h5>
+                <p>Tamil Nadu State Board</p>
+                <span class="edu-grade">Percentage: 84.17%</span>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <span class="edu-year">2018 – 2019</span>
+                <h5>Secondary School Leaving Certificate (SSLC)</h5>
+                <p>Tamil Nadu State Board</p>
+                <span class="edu-grade">Percentage: 95%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 3: SKILLS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">What I know</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with on a regular basis</p>
+      </div>
+
+      <!-- Skill Category: Programming Languages -->
+      <div class="skills-category" data-aos>
+        <h3 class="category-label"><i class="fas fa-terminal"></i> Programming Languages</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon" style="color:#f89820;"><i class="fab fa-java"></i></div>
+            <h4>Java</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="80"></div>
+            </div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon" style="color:#5c6bc0;"><i class="fas fa-copyright"></i></div>
+            <h4>C</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="75"></div>
+            </div>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon python"><i class="fab fa-python"></i></div>
+            <h4>Python</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="70"></div>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Category: Frontend -->
+      <div class="skills-category" data-aos>
+        <h3 class="category-label"><i class="fas fa-palette"></i> Web Basics</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+            <h4>HTML5</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="90"></div>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+            <h4>CSS3</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="85"></div>
+            </div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
+            <h4>JavaScript</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="70"></div>
+            </div>
+            <span class="skill-percent">70%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Category: Backend & DB -->
+      <div class="skills-category" data-aos>
+        <h3 class="category-label"><i class="fas fa-server"></i> Backend & Database</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon flask"><i class="fas fa-flask"></i></div>
+            <h4>Flask</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="78"></div>
+            </div>
+            <span class="skill-percent">78%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon mysql"><i class="fas fa-database"></i></div>
+            <h4>MySQL</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="80"></div>
+            </div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon" style="color:#336791;"><i class="fas fa-sitemap"></i></div>
+            <h4>DBMS</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="82"></div>
+            </div>
+            <span class="skill-percent">82%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Category: Tools -->
+      <div class="skills-category" data-aos>
+        <h3 class="category-label"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon github"><i class="fab fa-github"></i></div>
+            <h4>Git & GitHub</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="80"></div>
+            </div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon vscode"><i class="fas fa-code"></i></div>
+            <h4>VS Code</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="90"></div>
+            </div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon linux"><i class="fab fa-linux"></i></div>
+            <h4>Linux / CLI</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-level="65"></div>
+            </div>
+            <span class="skill-percent">65%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 4: PROJECTS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">A selection of projects I've built and am proud of</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project Card 1: SIH Project -->
+        <div class="project-card" data-aos>
+          <div class="project-img-wrap">
+            <div class="project-img project-img-1">
+              <div class="project-overlay">
+                <a href="https://github.com/ppadmapriya807-cell" target="_blank" class="overlay-btn">
+                  <i class="fab fa-github"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">SIH Project</span>
+            </div>
+            <h3 class="project-title">AI-Based Farmer Query Support & Advisory System</h3>
+            <p class="project-desc">
+              Developed an AI-based system to help farmers with farming-related queries.
+              Provides smart suggestions for crops, fertilizers, and pest control.
+              Built with a simple, user-friendly interface for easy farmer access.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/ppadmapriya807-cell" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <span class="project-link live-badge"><i class="fas fa-circle"></i> SIH 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2: PetCare -->
+        <div class="project-card" data-aos>
+          <div class="project-img-wrap">
+            <div class="project-img project-img-2">
+              <div class="project-overlay">
+                <a href="https://github.com/ppadmapriya807-cell" target="_blank" class="overlay-btn">
+                  <i class="fab fa-github"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+            <h3 class="project-title">PetCare — Pet Management System</h3>
+            <p class="project-desc">
+              A web application for lost and found pets. Features user login, pet details
+              management, and image upload. Built using Python, Flask, MySQL, HTML, and CSS
+              as a mini project.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/ppadmapriya807-cell" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <span class="project-link live-badge"><i class="fas fa-circle"></i> Mini Project</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3: Portfolio -->
+        <div class="project-card" data-aos>
+          <div class="project-img-wrap">
+            <div class="project-img project-img-3">
+              <div class="project-overlay">
+                <a href="https://github.com/ppadmapriya807-cell/portfolio" target="_blank" class="overlay-btn">
+                  <i class="fab fa-github"></i> View Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Flask</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <p class="project-desc">
+              A full-stack personal portfolio website built with Python Flask and MySQL.
+              Features a working contact form, resume download, smooth animations,
+              and fully responsive design for mobile and desktop.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/ppadmapriya807-cell/portfolio" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 5: CERTIFICATIONS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section certs-section" id="certifications">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">My credentials</span>
+        <h2 class="section-title">Certi<span class="gradient-text">fications</span></h2>
+        <p class="section-subtitle">Verified credentials from recognised learning platforms</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- Cert 1 -->
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">OfficeMaster</span>
+            <h3 class="cert-title">Workshop on Power BI</h3>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+            <span class="cert-verify">Certified Workshop Participant</span>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-award"></i></div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">be10X</span>
+            <h3 class="cert-title">Workshop on AI Tools</h3>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+            <span class="cert-verify">Certified Workshop Participant</span>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-award"></i></div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap">
+            <i class="fab fa-python"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Workshop Certificate</span>
+            <h3 class="cert-title">Python Programming & GUI Development</h3>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+            <span class="cert-verify">Crafting Solutions with Python</span>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-award"></i></div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Gentrobyte AI Labs</span>
+            <h3 class="cert-title">Power BI with AI for Data Analytics</h3>
+            <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+            <span class="cert-verify">Value Added Course</span>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-award"></i></div>
+        </div>
+
+      </div><!-- /certs-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 5.5: ACHIEVEMENTS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section" id="achievements" style="background:var(--gray-50); padding:80px 0;">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">My wins</span>
+        <h2 class="section-title">Achievements & <span class="gradient-text">Participation</span></h2>
+        <p class="section-subtitle">Events, competitions, and recognitions I'm proud of</p>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:18px;">
+
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">PSV College of Engineering &amp; Technology</span>
+            <h3 class="cert-title">🥇 1st Prize — Secret Saga</h3>
+            <p class="cert-date"><i class="fas fa-star"></i> Winner</p>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-medal"></i></div>
+        </div>
+
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Government College of Engineering, Dharmapuri</span>
+            <h3 class="cert-title">🥇 1st Prize — Outlier Hunt</h3>
+            <p class="cert-date"><i class="fas fa-star"></i> Winner</p>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-medal"></i></div>
+        </div>
+
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap" style="background:linear-gradient(135deg,#94a3b8,#475569);">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Government College of Engineering, Dharmapuri</span>
+            <h3 class="cert-title">🥈 2nd Prize — Mind Snap</h3>
+            <p class="cert-date"><i class="fas fa-star"></i> Runner Up</p>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-medal"></i></div>
+        </div>
+
+        <div class="cert-card" data-aos>
+          <div class="cert-icon-wrap" style="background:linear-gradient(135deg,#2563eb,#06b6d4);">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">PSV College &amp; Govt. College of Engineering, Dharmapuri</span>
+            <h3 class="cert-title">Paper Presentation — Brain Computer Interface</h3>
+            <p class="cert-date"><i class="fas fa-users"></i> Participant</p>
+          </div>
+          <div class="cert-ribbon"><i class="fas fa-star"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SECTION 6: CONTACT
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-tag">Say hello</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Have a project idea or opportunity? I'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info" data-aos>
+          <h3>Let's Connect</h3>
+          <p>
+            I'm currently looking for internship opportunities. Whether you have a question,
+            a project in mind, or just want to say hi, feel free to drop a message!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+917904848600">+91 7904848600</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:ppadmapriya807@gmail.com">ppadmapriya807@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/ppadmapriya807-cell" target="_blank">github.com/ppadmapriya807-cell</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/padmapriya-raja-701633335" target="_blank">linkedin.com/in/padmapriya-raja-701633335</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span>Hosur, Krishnagiri Dt, Tamil Nadu - 635109</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resume Download Button -->
+          <a href="/resume" class="btn btn-primary resume-download" download>
+            <i class="fas fa-file-pdf"></i> Download Resume
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap" data-aos>
+          <form class="contact-form" id="contactForm" novalidate>
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <div class="input-wrap">
+                <i class="fas fa-user input-icon"></i>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <span class="field-error" id="nameError"></span>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <div class="input-wrap">
+                <i class="fas fa-envelope input-icon"></i>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="your@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <span class="field-error" id="emailError"></span>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <div class="input-wrap textarea-wrap">
+                <i class="fas fa-comment-alt input-icon textarea-icon"></i>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Tell me about your project or opportunity…"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <span class="field-error" id="messageError"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display:none;">
+                <i class="fas fa-spinner fa-spin"></i> Sending…
+              </span>
+              <i class="fas fa-paper-plane btn-icon"></i>
+            </button>
+
+            <!-- Success / Error Message -->
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Padmapriya<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Crafting clean code and pixel-perfect interfaces — one commit at a time.</p>
+          <div class="footer-social">
+            <a href="https://github.com/ppadmapriya807-cell" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/padmapriya-raja-701633335aja-701633335" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:ppadmapriya807@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="footer-tech">
+          <h4>Built With</h4>
+          <ul>
+            <li><i class="fab fa-python"></i> Python &amp; Flask</li>
+            <li><i class="fas fa-database"></i> MySQL</li>
+            <li><i class="fab fa-html5"></i> HTML5 &amp; CSS3</li>
+            <li><i class="fab fa-js-square"></i> Vanilla JavaScript</li>
+            <li><i class="fab fa-github"></i> Hosted on Render</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Padmapriya R. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color:#ef4444;"></i> and lots of ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main JavaScript -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
